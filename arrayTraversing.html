@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array Traversing</title>
 
     <script>
-
-        /*
+      /*
             Array traversing and Accessing
                 -make html page to write basic array
                 -traversing with loop
@@ -18,42 +17,33 @@
 
         */
 
-        //traversing with looop
-        let data = [ 9,45,52,5,3,6,8,2,1,55,44,69,22,0,55,75 ];
+      //traversing with looop
+      let data = [9, 45, 52, 5, 3, 6, 8, 2, 1, 55, 44, 69, 22, 0, 55, 75];
 
-        for (let i = 0; i < data.length; i++) {
-             document.write(data[i] + `<br>`);
-        }        
+      for (let i = 0; i < data.length; i++) {
+        document.write(data[i] + `<br>`);
+      }
 
-        //accessing elements of array
-        function printNum() {
-
-            let num=document.getElementById('inputNumber').value;
-            //validation
-            if (num < data.length ) {
-            
-                // confirm(`Congratulations num is ${num}`);
-                console.log(num)
-                document.write(`Value of Array at index [${num}] : ${data[num]} `)
-            } else {
-                window.alert(`Index [${num}] is not avilable in Array. 😐`)
-            }
-            
-            
+      //accessing elements of array
+      function printNum() {
+        let num = document.getElementById("inputNumber").value;
+        //validation
+        if (num < data.length) {
+          // confirm(`Congratulations num is ${num}`);
+          console.log(num);
+          document.write(`Value of Array at index [${num}] : ${data[num]} `);
+        } else {
+          window.alert(`Index [${num}] is not avilable in Array. 😐`);
         }
-
+      }
     </script>
-    
-
-</head>
-<body>
-    
+  </head>
+  <body>
     <!-- to get the input data by button click -->
-    <label for="inputNumber">Enter a index no. to access the Array value :</label>
-    <input type="number" id="inputNumber">
+    <label for="inputNumber"
+      >Enter a index no. to access the Array value :</label
+    >
+    <input type="number" id="inputNumber" />
     <button onclick="printNum()">Meow</button>
-
-   
-
-</body>
+  </body>
 </html>
