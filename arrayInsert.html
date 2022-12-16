@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting Element in Array</title>
+
+    
+
+</head>
+<body>
+    <!-- Insert Element in Array -->
+    <!-- Array creation & position understanding -->
+    <!-- Looping to insert element -->
+    <!-- user input as array new element -->
+    <!-- insert with default function -->
+
+    <!-- 
+        arrayName.slice(indexPosition, deleteElement, newElement);
+    -->
+
+
+    <h3>lets play insert insert!!</h3>
+
+    <label for="indexInput">At what index you want to enter new element: </label>
+    <input type="number" id="indexInput"></br>
+    <label for="newElementInput">New Element : </label>
+    <input type="text" id="newElementInput"></br>
+
+    <button onclick="insertElement()">Enter</button>
+
+    <h3>Array: </h3>
+    <p id="outputInfo"></p>
+    <h3>Array: After Insert </h3>
+    <p id="outputInfoNew"></p>
+
+    
+    <script>
+        
+        let array = [60,50,8,5,69,74,5,26,69,85,25,3,21,5];
+        let outputInfo = document.getElementById('outputInfo');
+        let outputInfoNew = document.getElementById('outputInfoNew');
+
+        outputInfo.innerHTML = `${array}`;
+
+        function insertElement(){
+            
+            let position = document.getElementById('indexInput').value;
+            let newElement = document.getElementById('newElementInput').value;
+            
+            console.log(array)
+            //reverse loop
+            for (let i = array.length-1; i>=0 ; i--) {
+                console.log(i)
+
+                if( i >= position ) {
+                    array[i+1]=array[i];
+                    if(i==position){
+                        array[i]=newElement;
+                    }
+                }
+
+            }
+            console.log(array)
+            outputInfoNew.textContent = `${array}`;
+        }
+
+        
+        
+
+
+    </script>
+
+</body>
+</html>
