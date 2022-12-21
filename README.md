@@ -10,3 +10,8 @@
   - elements shift to right
   - no data loss
   - [File-02](/arrayInsert.html)
+
+  - Make array, define position 
+  - Use loop to delete element 
+  - delete element with txt input and button. 
+  - [File-3](/arrayDeleteElement.html)
